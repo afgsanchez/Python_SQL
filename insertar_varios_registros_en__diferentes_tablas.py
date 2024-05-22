@@ -17,7 +17,7 @@ cursor = database.cursor()
 # variable fabricante en la tabla que tenemos en la variable cursor.
 # Sentencia SQL parametrizada para insertar datos en la tabla Fabricante
 # Los '?' son marcadores de posición que serán reemplazados por los valores de la tupla fabricante
-#cursor.execute("INSERT INTO Fabricante VALUES(?,?,?,?,?)", fabricante)
+#cursor.execute("INSERT INTO Fabricante VALUES(?,?,?,?,?)", fabricante), esto evita inyeccion SQL
 
 # Hacemos un commit para confirmar que se graben los datos en la base de datos
 database.commit()
